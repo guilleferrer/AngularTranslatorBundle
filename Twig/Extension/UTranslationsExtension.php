@@ -21,9 +21,9 @@ class UTranslationsExtension extends \Twig_Extension
         );
     }
 
-    public function exposed_translations($appName = 'app', $domain = 'UndfExposed')
+    public function exposed_translations($appName = 'app', $domain = 'UndfExposed', $locale = 'es')
     {
-        $json = $this->translator->getCatalogue('es')->all('UndfExposed');
+        $json = $this->translator->getCatalogue($locale)->all($domain);
 
         $translations = json_encode($json);
 
