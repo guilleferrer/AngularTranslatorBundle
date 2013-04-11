@@ -1,8 +1,8 @@
 <?php
 
-namespace Undf\AngularTranslatorBundle\Twig\Extension;
+namespace Undf\AngularTransBundle\Twig\Extension;
 
-use Undf\AngularTranslatorBundle\Services\Translator;
+use Undf\AngularTransBundle\Services\Translator;
 
 class UTranslationsExtension extends \Twig_Extension
 {

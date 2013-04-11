@@ -9,7 +9,7 @@
  * file that was distributed with this source code.
  */
 
-namespace Undf\AngularTranslatorBundle\Services;
+namespace Undf\AngularTransBundle\Services;
 
 use Symfony\Bundle\FrameworkBundle\Translation\Translator as BaseTranslator;
 use Symfony\Component\Translation\MessageSelector;

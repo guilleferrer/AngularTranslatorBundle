@@ -1,6 +1,6 @@
 <?php
 
-namespace Undf\AngularTranslatorBundle\DependencyInjection;
+namespace Undf\AngularTransBundle\DependencyInjection;
 
 use Symfony\Component\Config\Definition\Builder\TreeBuilder;
 use Symfony\Component\Config\Definition\ConfigurationInterface;

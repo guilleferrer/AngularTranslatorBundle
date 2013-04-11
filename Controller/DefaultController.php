@@ -1,6 +1,6 @@
 <?php
 
-namespace Undf\AngularTranslatorBundle\Controller;
+namespace Undf\AngularTransBundle\Controller;
 
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;

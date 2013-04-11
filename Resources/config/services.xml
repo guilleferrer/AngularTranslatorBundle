@@ -6,7 +6,7 @@
 
     <!--
     <parameters>
-        <parameter key="undf_angular_translator.example.class">Undf\AngularTranslatorBundle\Example</parameter>
+        <parameter key="undf_angular_translator.example.class">Undf\AngularTransBundle\Example</parameter>
     </parameters>
 
     <services>

@@ -1,6 +1,6 @@
 <?php
 
-namespace Undf\AngularTranslatorBundle\Tests\Controller;
+namespace Undf\AngularTransBundle\Tests\Controller;
 
 use Symfony\Bundle\FrameworkBundle\Test\WebTestCase;
 

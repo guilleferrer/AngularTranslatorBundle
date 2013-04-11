@@ -1,9 +1,9 @@
 parameters:
-    translator.class: Undf\AngularTranslatorBundle\Services\Translator
+    translator.class: Undf\AngularTransBundle\Services\Translator
 
 services:
     undf.twig.utranslations_extension:
-            class: Undf\AngularTranslatorBundle\Twig\Extension\UTranslationsExtension
+            class: Undf\AngularTransBundle\Twig\Extension\UTranslationsExtension
             arguments: [ '@translator']
             tags:
                 - { name: twig.extension }

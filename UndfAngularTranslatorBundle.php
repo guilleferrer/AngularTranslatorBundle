@@ -1,9 +1,9 @@
 <?php
 
-namespace Undf\AngularTranslatorBundle;
+namespace Undf\AngularTransBundle;
 
 use Symfony\Component\HttpKernel\Bundle\Bundle;
 
-class UndfAngularTranslatorBundle extends Bundle
+class UndfAngularTransBundle extends Bundle
 {
 }

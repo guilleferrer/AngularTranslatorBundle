@@ -1,6 +1,6 @@
 <?php
 
-namespace Undf\AngularTranslatorBundle\DependencyInjection;
+namespace Undf\AngularTransBundle\DependencyInjection;
 
 use Symfony\Component\DependencyInjection\ContainerBuilder;
 use Symfony\Component\Config\FileLocator;

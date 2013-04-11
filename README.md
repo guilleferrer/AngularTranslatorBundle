@@ -1,4 +1,4 @@
-AngularTranslatorBundle
+AngularTransBundle
 =======================
 
 The AngularTranslator Bundle provides a translator in the client side. 
@@ -9,7 +9,7 @@ Usage
 Include the javascript :
 
 ``` jinja
-  @UndfAngularTranslatorBundle/Resources/public/js/services/uTrans.js
+  @UndfAngularTransBundle/Resources/public/js/services/uTrans.js
 ```
 
 Pass a json with all the exposed message keys that will feed your translator from a certain Catalogue.
