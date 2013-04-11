@@ -3,7 +3,7 @@
     "type": "symfony-bundle",
     "description": "Symfony2 and AngularJS module for client side translations" ,
     "keywords": ["angularjs", "symfony", "javascript", "angular"],
-    "homepage": "https://github.com/guilleferrer/AngularTranslatorBundle.git"
+    "homepage": "https://github.com/guilleferrer/AngularTranslatorBundle.git",
     "license": "MIT",
     "authors": [
         {
@@ -13,7 +13,7 @@
         }
     ],
     "require": {
-        "php":                      ">=5.3.1",
+        "php": ">=5.3.1"
     },
     "replace": {
         "undf/utrans": "dev-master"
