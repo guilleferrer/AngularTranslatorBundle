@@ -12,7 +12,7 @@ use Symfony\Component\DependencyInjection\Loader;
  *
  * To learn more see {@link http://symfony.com/doc/current/cookbook/bundles/extension.html}
  */
-class UndfAngularTranslatorExtension extends Extension
+class UndfAngularTransExtension extends Extension
 {
     /**
      * {@inheritDoc}
