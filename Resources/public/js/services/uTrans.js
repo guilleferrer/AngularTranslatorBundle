@@ -1,12 +1,11 @@
-angular.module('undf.translations', ['ng']).value('version', '0.1').value('translations').factory('uTrans', function (translations) {
+angular.module('uTrans', ['ng']).value('version', '0.1').value('translations').factory('uTrans', function (translations) {
 
     if (!angular.isObject(translations)) {
 
-        throw 'uTrans error. If you use the translations module you must set an object of translations. \n' + '\n.run(function(translationsLoader){ ' + '\n\t// Set the translations ' + '\n\ttranslationsLoader.load({ "text %varialbe%" : "Translation"}); ' + '\n});' + '\n\nUse the following format : \n\n' + '\n{\n' + '    "keyToTranslate1" : "Translation1",\n' + '    "keyToTranslate2": "Translation2"\n' + '};';
+        throw 'uTrans error. If you use the translations module you must set an object of translations as the configuration of the uTrans module. \n' + 'angular.module("uTrans").value("translations", [{ "text %varialbe%" : "Traducción" } ]); ' + '\n});' + '\n\nUse the following format : \n\n' + '\n{\n' + '    "keyToTranslate1" : "Translation1",\n' + '    "keyToTranslate2": "Translation2"\n' + '};';
     }
     // Get them from the config
     var translator = {};
-
 
     translator.translations = translations;
     /**
@@ -42,12 +41,12 @@ angular.module('undf.translations', ['ng']).value('version', '0.1').value('trans
 
             return translated;
         }
-    };
+    }
 
     return translator;
 }).filter('trans', function (uTrans) {
 
     return function (text, params) {
         return uTrans.trans(text, params);
-    };
+    }
 });
