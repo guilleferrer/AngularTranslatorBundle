@@ -1,0 +1,25 @@
+{
+    "name": "undf/angular-utrans",
+    "type": "symfony-bundle",
+    "description": "Symfony2 and AngularJS module for client side translations" ,
+    "keywords": ["angularjs", "symfony", "javascript", "angular"],
+    "homepage": "https://github.com/guilleferrer/AngularTranslatorBundle.git"
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Guillermo Ferrer",
+            "email": "guilleferrer@gmail.com",
+            "homepage": "https://github.com/guilleferrer/AngularTranslatorBundle.git"
+        }
+    ],
+    "require": {
+        "php":                      ">=5.3.1",
+    },
+    "replace": {
+        "undf/utrans": "dev-master"
+    },
+    "autoload": {
+        "psr-0": { "Undf\\AngularTransBundle" : "" }
+    },
+    "target-dir": "AngularTransBundle"
+}
