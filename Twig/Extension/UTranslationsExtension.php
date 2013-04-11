@@ -26,7 +26,7 @@ class UTranslationsExtension extends \Twig_Extension
         $translations = $this->translator->getCatalogue($locale)->all($domain);
 
         $html = '<script type="text/javascript">
-                    angular.module("uTrans").config("translations", ' . json_encode($translations) . ');
+                    angular.module("uTrans").value("translations", '. json_encode($translations) . ');
                 </script>';
 
         return $html;
