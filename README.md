@@ -9,16 +9,16 @@ Usage
 Include the javascript :
 
 ``` jinja
-  @UndfAngularTranslatorBundle/Resources/public/js/services/uTranslator.js
+  @UndfAngularTranslatorBundle/Resources/public/js/services/uTrans.js
 ```
 
 Pass a json with all the exposed message keys that will feed your translator from a certain Catalogue.
 
-Just include the twig function, with the name of your Angular module in the first argument and the name of the 
+Just include the twig function, in the first argument and the name of the 
 catalogue Domain in the second argument.
 
 ``` jinja
-  {{ utranslator_expose_translations('app', 'UndfExposed') }}
+  {{ utrans_expose_translations('NameOfTheCatalogueYouWantToExpose', 'locale') }}
 ```
 
 
@@ -47,4 +47,19 @@ if you need to pass parameters pass them with a placeholder %myVariable%
   
 {% endraw %}
 
+```
+
+This bundle uses an Angular Module called "uTrans"
+Don't forget to include this module as a dependency of your application.
+
+Example:
+```html
+<html ng-app="mainModule">
+...
+</html>
+````
+
+```javascript
+// You must add the uTrans module in your app's dependencies
+angular.module('mainModule', [ 'ng', 'uTrans' , '...' ]);
 ```
