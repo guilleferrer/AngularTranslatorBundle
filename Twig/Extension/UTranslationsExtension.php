@@ -17,22 +17,18 @@ class UTranslationsExtension extends \Twig_Extension
     public function getFunctions()
     {
         return array(
-            'utranslator_expose_translations' => new \Twig_Function_Method($this, 'exposed_translations', array('is_safe' => array('html')))
+            'utrans_expose_translations' => new \Twig_Function_Method($this, 'configUTrans', array('is_safe' => array('html')))
         );
     }
 
-    public function exposed_translations($appName = 'app', $domain = 'UndfExposed', $locale = 'es')
+    public function configUTrans($domain = 'messages', $locale = 'es')
     {
         $json = $this->translator->getCatalogue($locale)->all($domain);
 
-        $translations = json_encode($json);
+        $jsonTranslations = json_encode($json);
 
         $html = '<script type="text/javascript">
-                    ' . $appName . '.run(function(translationsLoader){
-
-                    // Set the translations
-                    translationsLoader.load(' . $translations . ');
-                });
+                    angular.module("uTrans").config("translations", ' . $jsonTranslations .');
                 </script>';
 
         return $html;
