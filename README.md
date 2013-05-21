@@ -26,7 +26,8 @@ catalogue Domain in the second argument.
 ``` jinja
   {{ utrans_expose_translations('NameOfTheCatalogueYouWantToExpose', 'locale') }}
 ```
-*utrans_expose_translations* reads the Catalogue "NameOfTheCatalogueYouWantToExpose", using the "translator" service  and creates a { json object } which exposes all the translations to the client side:
+*utrans_expose_translations* reads the Catalogue "NameOfTheCatalogueYouWantToExpose", using the "translator" service  and creates a { json object } which exposes all the translations to the client side.
+So, you don't have to worry about creating this configuration, the Twig function does it for you. This is what the twig helper will do for you:
 ```` html
 <script type="text/javascript">
                     angular.module("uTrans").value("translations", {
@@ -34,8 +35,6 @@ catalogue Domain in the second argument.
            });
 </script>
 ```
-
-So, you don't have to worry about creating this configuration, the Twig function does it for you.
 
 This bundle uses an Angular Module called "uTrans"
 Don't forget to include this module as a dependency of your AngularJS application.
@@ -84,7 +83,7 @@ angular.module('aModule', [ 'uTrans' ]).
     //  uTrans is the service injected by Angular I will use in my 'aService';
 
         var foo = 'bar';
-        var message = uTrans('myKey', { '%param%' : foo })
+        var message = uTrans.trans('myKey', { '%param%' : foo })
         alert( message );
 
 });
