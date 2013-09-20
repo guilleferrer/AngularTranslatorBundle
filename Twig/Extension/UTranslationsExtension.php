@@ -21,9 +21,13 @@ class UTranslationsExtension extends \Twig_Extension
         );
     }
 
-    public function configUTrans($domain = 'messages', $locale = 'es')
+    public function configUTrans($domains = 'messages', $locale = 'es')
     {
-        $translations = $this->translator->getCatalogue($locale)->all($domain);
+        $translations = array();
+        $domains = is_array($domains) ? $domains : array($domains);
+        foreach($domains as $domain) {
+            $translations = array_merge($translations, $this->translator->getCatalogue($locale)->all($domain));
+        }
 
         $html = '<script type="text/javascript">
                     angular.module("uTrans").value("translations", '. json_encode($translations) . ');
